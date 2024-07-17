@@ -1,0 +1,16 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7",
+  "package": "me.imtoggle.fullshadow.mixin",
+  "refmap": "mixins.fullshadowoptimizer.refmap.json",
+  "injectors": {
+    "maxShiftBy": 5
+  },
+  "verbose": true,
+  "mixins": [
+    "TextRendererMixin"
+  ],
+  "client": [
+    "FontRendererMixin"
+  ]
+}
