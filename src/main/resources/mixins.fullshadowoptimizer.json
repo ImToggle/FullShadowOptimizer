@@ -11,6 +11,8 @@
     "TextRendererMixin"
   ],
   "client": [
-    "FontRendererMixin"
+    "FontRendererAccessor",
+    "FontRendererMixin",
+    "OFFontRendererAccessor"
   ]
 }

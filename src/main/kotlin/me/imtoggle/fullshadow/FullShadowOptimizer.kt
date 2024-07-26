@@ -1,6 +1,8 @@
 package me.imtoggle.fullshadow
 
-import me.imtoggle.fullshadow.renderer.BorderedTextRenderer
+import cc.polyfrost.oneconfig.utils.dsl.mc
+import me.imtoggle.fullshadow.renderer.CachedTextRenderer
+import net.minecraft.client.resources.IReloadableResourceManager
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
 
@@ -12,7 +14,7 @@ object FullShadowOptimizer {
 
     @Mod.EventHandler
     fun onInit(event: FMLInitializationEvent) {
-//        ModConfig
-        BorderedTextRenderer.initialize()
+        ModConfig
+        (mc.resourceManager as IReloadableResourceManager).registerReloadListener(CachedTextRenderer)
     }
 }
